@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png">
+        <title>KIZIBA HEALTH CLINIC Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top-header" role="banner">
+            <div class="brand">
+                <img src="logo.png" alt="Kiziba Health Clinic Logo">
+                <div>
+                    <p class="brand-name" id="clinicTitle">KIZIBA HEALTH CLINIC</p>
+                    <p class="brand-subtitle">Digital Check-in System</p>
+                </div>
+            </div>
+            <div class="top-meta" aria-label="Dashboard summary">
+                <div class="status-pill offline">
+                    <span class="status-dot"></span>
+                    Offline Mode
+                    <span class="status-note">All systems operational</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">May 20, 2025</span>
+                    <span class="meta-value">10:30 AM</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">Receptionist</span>
+                    <span class="meta-value">Staff Portal</span>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar" role="navigation" aria-label="Main navigation">
+            <div class="sidebar-brand">
+                <p>Menu</p>
+            </div>
+            <nav>
+                <a href="index.html" class="active" aria-current="page">Dashboard</a>
+                <a href="check-in.html">Check-in</a>
+                <a href="myVisit.html">My visit</a>
+                <a href="about.html">About</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+            <div class="div" role="status" aria-label="System status">
+                <h6>System Status</h6>
+                <p>Offline Mode</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content" role="main">
+            <section class="dashboard-hero card" aria-label="Dashboard welcome panel">
+                <div>
+                    <p class="eyebrow">Dashboard</p>
+                    <h1>Welcome back, Receptionist</h1>
+                    <p>Manage patient check-ins, queue updates, and recent visits from one place.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="check-in.html" class="button-primary">Check-in Patient</a>
+                    <a href="myVisit.html" class="button-secondary">View Queue</a>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="card card-large">
+                    <div class="card-header">
+                        <div>
+                            <h2>Patient Check-in</h2>
+                            <p>Register a new patient quickly and keep the queue moving.</p>
+                        </div>
+                    </div>
+                    <form id="dashboardCheckInForm" class="dashboard-form" aria-label="New patient check-in form">
+                        <fieldset>
+                            <label for="dashboardFullName">Full Name</label>
+                            <input type="text" id="dashboardFullName" placeholder="Enter full name" required>
+
+                            <label for="dashboardAge">Age</label>
+                            <input type="number" id="dashboardAge" placeholder="Enter age" required>
+
+                            <label for="dashboardGender">Gender</label>
+                            <select id="dashboardGender" required>
+                                <option value="">Select gender</option>
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                <option value="Other">Other</option>
+                            </select>
+
+                            <label for="dashboardSymptoms">Symptoms / Reason for visit</label>
+                            <textarea id="dashboardSymptoms" rows="4" placeholder="Describe symptoms" required></textarea>
+
+                            <div class="form-actions">
+                                <button type="submit" class="button-primary">Check-in Patient</button>
+                                <button type="reset" class="button-ghost">Reset</button>
+                            </div>
+                        </fieldset>
+                    </form>
+                </article>
+
+                <aside class="dashboard-summary">
+                    <div class="summary-card">
+                        <h3>Current Queue</h3>
+                        <p class="summary-number" id="nextPatientNumber">#1</p>
+                        <p class="summary-label">Next patient number</p>
+                    </div>
+                    <div class="summary-grid">
+                        <div class="summary-card small-card">
+                            <p class="summary-label">Waiting</p>
+                            <p class="summary-number" id="queueWaiting">0</p>
+                        </div>
+                        <div class="summary-card small-card in-progress">
+                            <p class="summary-label">In Progress</p>
+                            <p class="summary-number" id="queueInProgress">0</p>
+                        </div>
+                        <div class="summary-card small-card completed">
+                            <p class="summary-label">Completed</p>
+                            <p class="summary-number" id="queueCompleted">0</p>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="dashboard-grid bottom-row">
+                <article class="card recent-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>Recent Check-ins</h2>
+                            <p>Latest patients and their current status.</p>
+                        </div>
+                        <a href="myVisit.html" class="button-secondary">View All Patients</a>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Patient Name</th>
+                                    <th>Age</th>
+                                    <th>Time</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentCheckinsBody">
+                                <tr><td colspan="5">No recent check-ins yet.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="card quick-actions-card">
+                    <div class="card-header">
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Fast links for everyday clinic tasks.</p>
+                        </div>
+                    </div>
+                    <div class="actions-list">
+                        <a href="check-in.html" class="quick-action button-primary">Register New Patient</a>
+                        <a href="myVisit.html" class="quick-action button-secondary">Appointments</a>
+                        <a href="settings.html" class="quick-action button-ghost">Reports</a>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <script src="accessibility.js"></script>
+        <script src="script.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html>

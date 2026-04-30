@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png">
+        <title>KIZIBA HEALTH CLINIC - Check-in</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top-header" role="banner">
+            <div class="brand">
+                <img src="logo.png" alt="Kiziba Health Clinic Logo">
+                <div>
+                    <p class="brand-name" id="clinicTitle">KIZIBA HEALTH CLINIC</p>
+                    <p class="brand-subtitle">Digital Check-in System</p>
+                </div>
+            </div>
+            <div class="top-meta" aria-label="Dashboard summary">
+                <div class="status-pill offline">
+                    <span class="status-dot"></span>
+                    Offline Mode
+                    <span class="status-note">All systems operational</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">May 20, 2025</span>
+                    <span class="meta-value">10:30 AM</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">Receptionist</span>
+                    <span class="meta-value">Staff Portal</span>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar" role="navigation" aria-label="Main navigation">
+            <div class="sidebar-brand">
+                <p>Menu</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="check-in.html" class="active" aria-current="page">Check-in</a>
+                <a href="myVisit.html">My visit</a>
+                <a href="about.html">About</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+            <div class="div" role="status" aria-label="System status">
+                <h6>System Status</h6>
+                <p>Offline Mode</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content" role="main">
+            <section class="dashboard-hero card" aria-label="Check-in welcome panel">
+                <div>
+                    <p class="eyebrow">Patient Check-in</p>
+                    <h1>Register New Patient</h1>
+                    <p>Quickly register patients and add them to the queue for consultation.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="index.html" class="button-secondary">Back to Dashboard</a>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>PATIENTS Check-in</h2>
+                        <p>Fill out the form below to register a new patient.</p>
+                    </div>
+                </div>
+                <form id="checkInForm" class="dashboard-form" role="form" aria-labelledby="checkin-title">
+                    <fieldset>
+                        <legend id="checkin-title" class="sr-only">Patient Check-in Form</legend>
+
+                        <label for="fullName">Full name*</label>
+                        <input type="text" id="fullName" placeholder="Enter full name" required aria-describedby="name-help">
+                        <span id="name-help" class="sr-only">Enter your full legal name as it appears on your identification</span>
+
+                        <label for="age">Age*</label>
+                        <input type="number" id="age" placeholder="Enter age" required min="1" max="120" aria-describedby="age-help">
+                        <span id="age-help" class="sr-only">Enter your age in years</span>
+
+                        <label for="gender">Gender*</label>
+                        <select id="gender" required aria-describedby="gender-help">
+                            <option value="">Select option</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                        <span id="gender-help" class="sr-only">Select your gender identity</span>
+
+                        <label for="phone">Phone number*</label>
+                        <input type="tel" id="phone" placeholder="e.g. 0788000000" required pattern="[0-9]{10}" aria-describedby="phone-help">
+                        <span id="phone-help" class="sr-only">Enter your 10-digit phone number starting with 078, 079, etc.</span>
+
+                        <label for="symptoms">Symptoms*</label>
+                        <textarea id="symptoms" cols="30" rows="5" placeholder="Write how you feel" required aria-describedby="symptoms-help"></textarea>
+                        <span id="symptoms-help" class="sr-only">Describe your current symptoms and how you're feeling</span>
+
+                        <label for="emergency">Is this an emergency?*</label>
+                        <select id="emergency" required aria-describedby="emergency-help">
+                            <option value="">Select option</option>
+                            <option value="No">No - Routine Visit</option>
+                            <option value="Yes">Yes - Emergency</option>
+                            <option value="Urgent">Urgent - Needs Priority</option>
+                        </select>
+                        <span id="emergency-help" class="sr-only">Select whether this is an emergency or routine visit</span>
+
+                        <label for="services">Services/Consultations Needed*</label>
+                        <select id="services" required aria-describedby="services-help">
+                            <option value="">Select service</option>
+                            <option value="General Consultation">General Consultation</option>
+                            <option value="Emergency Care">Emergency Care</option>
+                            <option value="Vaccination">Vaccination</option>
+                            <option value="Follow-up">Follow-up</option>
+                            <option value="Laboratory">Laboratory</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span id="services-help" class="sr-only">Select the type of service you need</span>
+
+                        <div class="form-actions">
+                            <button type="submit">Submit your info</button>
+                            <button type="reset" class="button-ghost">Clear</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+
+        <script src="accessibility.js"></script>
+        <script src="script.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png">
+        <title>Patient Login - KIZIBA HEALTH CLINIC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top-header" role="banner">
+            <div class="brand">
+                <img src="logo.png" alt="Kiziba Health Clinic Logo">
+                <div>
+                    <p class="brand-name" id="clinicTitle">KIZIBA HEALTH CLINIC</p>
+                    <p class="brand-subtitle">Digital Check-in System</p>
+                </div>
+            </div>
+            <div class="top-meta" aria-label="Dashboard summary">
+                <div class="status-pill offline">
+                    <span class="status-dot"></span>
+                    Offline Mode
+                    <span class="status-note">All systems operational</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">May 20, 2025</span>
+                    <span class="meta-value">10:30 AM</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">Patient Portal</span>
+                    <span class="meta-value">Login Access</span>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar" role="navigation" aria-label="Main navigation">
+            <div class="sidebar-brand">
+                <p>Menu</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="check-in.html">Check-in</a>
+                <a href="myVisit.html" class="active" aria-current="page">My visit</a>
+                <a href="about.html">About</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+            <div class="div" role="status" aria-label="System status">
+                <h6>System Status</h6>
+                <p>Offline Mode</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content" role="main">
+            <section class="dashboard-hero card" aria-label="Patient login welcome panel">
+                <div>
+                    <p class="eyebrow">Patient Portal</p>
+                    <h1>Access Your Visit Information</h1>
+                    <p>Login with your phone number to view your visit details and provide feedback.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="check-in.html" class="button-secondary">New Patient? Check-in</a>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <div>
+                        <h2>Patient Login</h2>
+                        <p>Enter your phone number to access your visit information.</p>
+                    </div>
+                </div>
+                <form id="loginForm" class="dashboard-form" role="form" aria-labelledby="login-title">
+                    <fieldset>
+                        <legend id="login-title" class="sr-only">Patient Login Form</legend>
+                        <label for="loginPhone">Enter your phone number</label>
+                        <input type="tel" id="loginPhone" placeholder="e.g. 0788000000" required aria-describedby="login-phone-help">
+                        <span id="login-phone-help" class="sr-only">Enter the phone number you used during check-in</span>
+                        <div class="form-actions">
+                            <button type="submit" class="button-primary">Login</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <p id="message" role="status" aria-live="polite"></p>
+            </section>
+        </main>
+
+        <script src="accessibility.js"></script>
+        <script src="login.js"></script>        <script src="settings.js"></script>    </body>
+</html>

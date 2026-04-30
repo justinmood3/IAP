@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png">
+        <title>About - KIZIBA HEALTH CLINIC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top-header" role="banner">
+            <div class="brand">
+                <img src="logo.png" alt="Kiziba Health Clinic Logo">
+                <div>
+                    <p class="brand-name" id="clinicTitle">KIZIBA HEALTH CLINIC</p>
+                    <p class="brand-subtitle">Digital Check-in System</p>
+                </div>
+            </div>
+            <div class="top-meta" aria-label="Dashboard summary">
+                <div class="status-pill offline">
+                    <span class="status-dot"></span>
+                    Offline Mode
+                    <span class="status-note">All systems operational</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">May 20, 2025</span>
+                    <span class="meta-value">10:30 AM</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">Receptionist</span>
+                    <span class="meta-value">Staff Portal</span>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar" role="navigation" aria-label="Main navigation">
+            <div class="sidebar-brand">
+                <p>Menu</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="check-in.html">Check-in</a>
+                <a href="myVisit.html">My visit</a>
+                <a href="about.html" class="active" aria-current="page">About</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+            <div class="div" role="status" aria-label="System status">
+                <h6>System Status</h6>
+                <p>Offline Mode</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content" role="main">
+            <section class="dashboard-hero card" aria-label="About page welcome panel">
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h1>Kiziba Health Clinic System</h1>
+                    <p>Learn about our digital check-in system and how it improves patient care.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="index.html" class="button-secondary">Back to Dashboard</a>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="card">
+                    <h2>🏥 Our Mission</h2>
+                    <p>
+                        Kiziba Health Clinic is a simple offline digital system designed to improve
+                        patient registration, tracking, and feedback collection in rural health centers.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2>💡 What This System Does</h2>
+                    <ul>
+                        <li>Registers patients offline</li>
+                        <li>Stores patient data using localStorage</li>
+                        <li>Allows patients to view their visit information</li>
+                        <li>Collects feedback after consultation</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h2>⚙️ How It Works</h2>
+                    <p>
+                        1. Patient checks in using the form<br>
+                        2. Data is saved in the browser (offline storage)<br>
+                        3. Patient logs in using phone number<br>
+                        4. System shows visit details and feedback form
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h2>👨‍⚕️ Purpose</h2>
+                    <p>
+                        This system helps clinics reduce paperwork, improve patient tracking,
+                        and ensure better service delivery even without internet connection.
+                    </p>
+                </article>
+            </section>
+        </main>
+
+        <script src="accessibility.js"></script>
+        <script src="script.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html>

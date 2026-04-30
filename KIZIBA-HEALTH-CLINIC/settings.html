@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png">
+        <title>Settings - KIZIBA HEALTH CLINIC</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top-header" role="banner">
+            <div class="brand">
+                <img src="logo.png" alt="Kiziba Health Clinic Logo">
+                <div>
+                    <p class="brand-name" id="clinicTitle">KIZIBA HEALTH CLINIC</p>
+                    <p class="brand-subtitle">Digital Check-in System</p>
+                </div>
+            </div>
+            <div class="top-meta" aria-label="Dashboard summary">
+                <div class="status-pill offline">
+                    <span class="status-dot"></span>
+                    Offline Mode
+                    <span class="status-note">All systems operational</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">May 20, 2025</span>
+                    <span class="meta-value">10:30 AM</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-title">Receptionist</span>
+                    <span class="meta-value">Staff Portal</span>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar" role="navigation" aria-label="Main navigation">
+            <div class="sidebar-brand">
+                <p>Menu</p>
+            </div>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="check-in.html">Check-in</a>
+                <a href="myVisit.html">My visit</a>
+                <a href="about.html">About</a>
+                <a href="settings.html" class="active" aria-current="page">Settings</a>
+            </nav>
+            <div class="div" role="status" aria-label="System status">
+                <h6>System Status</h6>
+                <p>Offline Mode</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content" role="main">
+            <section class="dashboard-hero card" aria-label="Settings welcome panel">
+                <div>
+                    <p class="eyebrow">Settings</p>
+                    <h1>Customize Your Experience</h1>
+                    <p>Configure accessibility options, clinic settings, and system preferences.</p>
+                </div>
+                <div class="hero-actions">
+                    <a href="index.html" class="button-secondary">Back to Dashboard</a>
+                </div>
+            </section>
+
+            <section class="dashboard-grid">
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🏥 Clinic Name</h2>
+                            <p>Customize the clinic name displayed throughout the system.</p>
+                        </div>
+                    </div>
+                    <input type="text" id="clinicNameInput" placeholder="Enter clinic name" aria-label="Clinic name input">
+                    <button id="saveName" class="button-primary" aria-label="Save clinic name">Save Name</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🎨 Theme</h2>
+                            <p>Choose between light and dark themes for the interface.</p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button id="lightTheme" class="button-secondary" aria-label="Switch to light theme">Light Mode</button>
+                        <button id="darkTheme" class="button-secondary" aria-label="Switch to dark theme">Dark Mode</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>📝 Text Size</h2>
+                            <p>Adjust the text size for better readability.</p>
+                        </div>
+                    </div>
+                    <div class="text-size-controls">
+                        <button id="decreaseText" aria-label="Decrease text size">-</button>
+                        <span id="currentTextSize" aria-live="polite">Normal</span>
+                        <button id="increaseText" aria-label="Increase text size">+</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🎯 High Contrast</h2>
+                            <p>Enable high contrast mode for better visibility.</p>
+                        </div>
+                    </div>
+                    <button id="toggleContrast" class="button-secondary" aria-label="Toggle high contrast mode">Enable High Contrast</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🌈 Color Scheme</h2>
+                            <p>Select color schemes for color blindness accessibility.</p>
+                        </div>
+                    </div>
+                    <select id="colorScheme" aria-label="Select color scheme">
+                        <option value="default">Default</option>
+                        <option value="deuteranopia">Deuteranopia (Green-weak)</option>
+                        <option value="protanopia">Protanopia (Red-weak)</option>
+                        <option value="tritanopia">Tritanopia (Blue-weak)</option>
+                        <option value="monochrome">Monochrome</option>
+                    </select>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🎭 Motion Preferences</h2>
+                            <p>Reduce animations and transitions for comfort.</p>
+                        </div>
+                    </div>
+                    <button id="toggleMotion" class="button-secondary" aria-label="Toggle reduced motion">Reduce Motion</button>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🎧 Screen Reader Support</h2>
+                            <p>Enhanced support for screen reader users.</p>
+                        </div>
+                    </div>
+                    <button id="toggleScreenReader" class="button-secondary" aria-label="Toggle enhanced screen reader mode">Enhanced Mode</button>
+                    <p class="help-text">Enables additional ARIA labels and announcements</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>⌨️ Keyboard Navigation</h2>
+                            <p>Enhanced keyboard navigation and focus indicators.</p>
+                        </div>
+                    </div>
+                    <button id="toggleKeyboardNav" class="button-secondary" aria-label="Toggle enhanced keyboard navigation">Enhanced Focus</button>
+                    <p class="help-text">Makes focus indicators more visible</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>🔄 Reset All Settings</h2>
+                            <p>Reset all accessibility and customization settings.</p>
+                        </div>
+                    </div>
+                    <button id="resetSettings" class="danger-btn button-secondary" aria-label="Reset all accessibility settings">Reset to Defaults</button>
+                </article>
+            </section>
+        </main>
+
+        <script src="accessibility.js"></script>
+        <script src="settings.js"></script>
+    </body>
+</html>
