@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="2.png" type="image/png">
+        <title>CURRENT CONVERTER 2026</title>
+        <link rel="styleSheet" href="style.css">
+        <link rel="styleSheet" href="settings.css">
+        <script src="settings.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <img src="1.png" controls width="50" height="50">
+            <h3 data-i18n="header_main">CURRENT CONVERTER 2026</h3>
+            <nav>
+               <a href="index.html" data-i18n="nav_home">Home</a>
+                <a href="converter.html" data-i18n="nav_converter">Converter</a>
+                <a href="details.html" data-i18n="nav_details">Details</a>
+                <a href="history.html" data-i18n="nav_history">History</a>
+                <a href="settings.html" data-i18n="nav_settings">Settings</a>
+            </nav>
+        </header>
+        <main>
+            <section class="con" aria-labelledby="accessibility-settings">
+                <h2 id="accessibility-settings" data-i18n="settings_title">Accessibility Settings</h2>
+                <form>
+                    <fieldset>
+                        <legend data-i18n="settings_display">Display</legend>
+                        <p data-i18n="settings_display_help">Adjust visual settings to make the app easier to read and use.</p>
+
+                        <label for="text-size" data-i18n="settings_text_size">Text size:</label>
+                        <select id="text-size" name="text-size">
+                            <option value="default" data-i18n="settings_text_default">Default</option>
+                            <option value="large" data-i18n="settings_text_large">Large</option>
+                            <option value="x-large" data-i18n="settings_text_x_large">Extra Large</option>
+                        </select>
+                        <br><br>
+
+                        <label for="contrast" data-i18n="settings_contrast">Contrast mode:</label>
+                        <select id="contrast" name="contrast">
+                            <option value="normal" data-i18n="settings_contrast_normal">Normal</option>
+                            <option value="high" data-i18n="settings_contrast_high">High Contrast</option>
+                        </select>
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend data-i18n="settings_interaction">Interaction</legend>
+                        <p data-i18n="settings_interaction_help">Improve control and reduce visual discomfort while using the app.</p>
+
+                        <label>
+                            <input type="checkbox" name="reduce-motion">
+                            <span data-i18n="settings_reduce_motion">Reduce motion effects</span>
+                        </label>
+                        <br><br>
+
+                        <label>
+                            <input type="checkbox" name="keyboard-focus">
+                            <span data-i18n="settings_keyboard_focus">Show strong keyboard focus highlight</span>
+                        </label>
+                        <br><br>
+
+                        <label>
+                            <input type="checkbox" name="screen-reader">
+                            <span data-i18n="settings_screen_reader">Enable screen reader friendly announcements</span>
+                        </label>
+                    </fieldset>
+
+                    <br>
+                    
+                    <fieldset>
+                        <legend data-i18n="settings_language_theme">Language & Theme</legend>
+                        <p data-i18n="settings_language_theme_help">Choose your preferred app language and display theme.</p>
+
+                        <label for="language" data-i18n="settings_language">Language:</label>
+                        <select id="language" name="language">
+                            <option value="en" data-i18n="language_english">English</option>
+                            <option value="fr" data-i18n="language_french">French</option>
+                            <option value="es" data-i18n="language_spanish">Spanish</option>
+                            <option value="pt" data-i18n="language_portuguese">Portuguese</option>
+                            <option value="zh" data-i18n="language_chinese">Chinese</option>
+                            <option value="rw" data-i18n="language_kinyarwanda">Kinyarwanda</option>
+                        </select>
+                        <br><br>
+
+                        <label for="theme-mode" data-i18n="settings_theme_mode">Theme mode:</label>
+                        <select id="theme-mode" name="theme-mode">
+                            <option value="system" data-i18n="settings_theme_system">System Default</option>
+                            <option value="light" data-i18n="settings_theme_light">Light</option>
+                            <option value="dark" data-i18n="settings_theme_dark">Dark</option>
+                        </select>
+                        <br><br>
+
+                        <label for="color-theme" data-i18n="settings_color_theme">Color theme:</label>
+                        <select id="color-theme" name="color-theme">
+                            <option value="blue" data-i18n="settings_color_blue">Blue</option>
+                            <option value="green" data-i18n="settings_color_green">Green</option>
+                            <option value="orange" data-i18n="settings_color_orange">Orange</option>
+                            <option value="gray" data-i18n="settings_color_gray">Gray</option>
+                        </select>
+                    </fieldset>
+
+                    <br>
+                    <button type="submit" data-i18n="settings_save">Save Accessibility Settings</button>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

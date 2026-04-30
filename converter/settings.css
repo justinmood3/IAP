@@ -1,0 +1,141 @@
+html {
+  font-size: 16px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.theme-light {
+  background-color: #f1f1f1;
+  color: #111111;
+}
+
+body.theme-dark {
+  background-color: #1c1d20;
+  color: #f2f2f2;
+}
+
+body.theme-dark header {
+  background-color: #2f343d;
+}
+
+body.theme-dark .div,
+body.theme-dark .con,
+body.theme-dark .box,
+body.theme-dark .card {
+  background-color: #2a2d33;
+  color: #f2f2f2;
+}
+
+body.theme-dark table,
+body.theme-dark th,
+body.theme-dark td {
+  color: #f2f2f2;
+}
+
+body.theme-dark a {
+  color: #f2f2f2;
+}
+
+html.text-large {
+  font-size: 18px;
+}
+
+html.text-x-large {
+  font-size: 20px;
+}
+
+body.contrast-high {
+  filter: contrast(1.2);
+}
+
+body.contrast-high a {
+  text-decoration: underline;
+}
+
+body.focus-strong :focus {
+  outline: 3px solid #ff8c00;
+  outline-offset: 3px;
+}
+
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+body.color-blue {
+  --accent-color: #0074d9;
+}
+
+body.color-green {
+  --accent-color: #2e8b57;
+}
+
+body.color-orange {
+  --accent-color: #d97706;
+}
+
+body.color-gray {
+  --accent-color: #6b7280;
+}
+
+button,
+.btn {
+  background-color: var(--accent-color, #0074d9) !important;
+  color: #ffffff !important;
+}
+
+html.text-large a,
+html.text-large button,
+html.text-large input,
+html.text-large select,
+html.text-large label,
+html.text-large p,
+html.text-large h1,
+html.text-large h2,
+html.text-large h3,
+html.text-large h4,
+html.text-large h5,
+html.text-large h6,
+html.text-large th,
+html.text-large td,
+html.text-large legend,
+html.text-large span,
+html.text-large pre {
+  font-size: 1.08rem !important;
+}
+
+html.text-x-large a,
+html.text-x-large button,
+html.text-x-large input,
+html.text-x-large select,
+html.text-x-large label,
+html.text-x-large p,
+html.text-x-large h1,
+html.text-x-large h2,
+html.text-x-large h3,
+html.text-x-large h4,
+html.text-x-large h5,
+html.text-x-large h6,
+html.text-x-large th,
+html.text-x-large td,
+html.text-x-large legend,
+html.text-x-large span,
+html.text-x-large pre {
+  font-size: 1.18rem !important;
+}

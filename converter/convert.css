@@ -1,0 +1,72 @@
+body{
+    text-align: center;
+    background-color: rgb(240, 232, 232);
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+header{
+    background-color: lightblue;
+    text-align: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 30px;
+}
+nav{
+    word-spacing: 20px;
+    text-align: right;
+    margin-right: 20px;
+    font-size: larger;
+    margin-bottom: 30px;
+}
+h3{
+    margin-left: 20px;
+}
+img{
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+}
+.div{
+    background-color: rgb(122, 113, 113);
+    text-align: center;
+    font-size: larger;
+    margin-top: 30px;
+    padding: 40px;
+    margin: 60px;
+    color: white;
+   border-radius: 40px;
+   margin-left: 20%;
+   margin-right: 20%;
+}
+input{
+    font-size: 30px;
+    padding-left: 70px;
+}
+select{
+    padding: 15px;
+}
+button{
+    padding: 20px;
+    background-color: rgb(141, 152, 211);
+    border-radius: 20px;
+}
+.button {
+    background-color: rgb(48, 31, 122);
+    padding: 10px;
+}
+footer {
+    text-align: center;
+    background: black;
+    color: aliceblue;
+    padding: 20px;
+
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
